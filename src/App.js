@@ -23,7 +23,7 @@ export default class App extends Component {
 
     const title = "Faça o Download do App de Auriflama pelos links abaixo!!"
 
-    const url = "https://www.google.com.br/?gws_rd=ssl"
+    const url = "https://applink.com.br/guia_auriflama"
     const shareURL = `
     
     IOS: ${url} 
