@@ -1,25 +1,87 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  LinkedinShareButton,
+  RedditShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+
+  EmailIcon,
+  FacebookIcon,
+  LinkedinIcon,
+  RedditIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
+
+export default class App extends Component {
+  render() {
+
+    const title = "Faça o Download do App de Auriflama pelos links abaixo!!"
+
+    const url = "https://www.google.com.br/?gws_rd=ssl"
+    const shareURL = `
+    
+    IOS: ${url} 
+    Google Play ${url}
+    `
+
+    return(
+      <>
+        <FacebookShareButton 
+          url={shareURL}
+          title={title}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+          <FacebookIcon size={40} round={true} />
+        </FacebookShareButton>
+        
+        <WhatsappShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <WhatsappIcon size={40} round={true} />
+        </WhatsappShareButton>
 
-export default App;
+        <EmailShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <EmailIcon size={40} round={true} />
+        </EmailShareButton>
+
+        <LinkedinShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <LinkedinIcon size={40} round={true} />
+        </LinkedinShareButton>
+
+        <RedditShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <RedditIcon size={40} round={true} />
+        </RedditShareButton>
+
+        <TelegramShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <TelegramIcon size={40} round={true} />
+        </TelegramShareButton>
+
+        <TwitterShareButton 
+          url={shareURL}
+          title={title}
+        >
+          <TwitterIcon size={40} round={true} />
+        </TwitterShareButton>
+      </>
+
+    )
+  }
+}
