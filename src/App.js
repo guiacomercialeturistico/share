@@ -21,11 +21,10 @@ import {
 export default class App extends Component {
   render() {
 
-    const title = "Faça o Download do App de Auriflama pelos links abaixo!!"
-
     const url = "https://applink.com.br/guia_auriflama"
-    const shareURL = `
-    
+    const title = `
+    Faça o Download do App de Auriflama pelos links abaixo!!
+
     IOS: ${url} 
     Google Play ${url}
     `
@@ -33,49 +32,49 @@ export default class App extends Component {
     return(
       <>
         <FacebookShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <FacebookIcon size={40} round={true} />
         </FacebookShareButton>
         
         <WhatsappShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <WhatsappIcon size={40} round={true} />
         </WhatsappShareButton>
 
         <EmailShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <EmailIcon size={40} round={true} />
         </EmailShareButton>
 
         <LinkedinShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <LinkedinIcon size={40} round={true} />
         </LinkedinShareButton>
 
         <RedditShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <RedditIcon size={40} round={true} />
         </RedditShareButton>
 
         <TelegramShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <TelegramIcon size={40} round={true} />
         </TelegramShareButton>
 
         <TwitterShareButton 
-          url={shareURL}
+          url={url}
           title={title}
         >
           <TwitterIcon size={40} round={true} />
