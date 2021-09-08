@@ -22,18 +22,18 @@ export default class App extends Component {
   render() {
 
     const url = "https://applink.com.br/guia_auriflama"
-    const title = `
-    Faça o Download do App de Auriflama pelos links abaixo!!
 
-    IOS: ${url} 
-    Google Play ${url}
-    `
+    const urlIOS = "https://apps.apple.com/br/app/guia-auriflama/id1573281260"
+    const urlGP = "https://play.google.com/store/apps/details?id=br.com.app.gpu2645572.gpu8b2aa6b58d52231caebdbfddb3a68c68"
+
+    const title = `Baixe o App de Auriflama pelos links abaixo:${'\n'}${'\n'}iOS: ${urlIOS} ${'\n'}${'\n'}Google Play: ${urlGP} ${'\n'}${'\n'}Navegador:`
 
     return(
       <>
         <FacebookShareButton 
           url={url}
           title={title}
+
         >
           <FacebookIcon size={40} round={true} />
         </FacebookShareButton>
